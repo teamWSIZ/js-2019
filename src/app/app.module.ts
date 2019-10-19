@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { NiceFooterComponent } from './nice-footer/nice-footer.component';
 import { GamesComponent } from './games/games.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { GamesComponent } from './games/games.component';
     NiceFooterComponent,
     GamesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [MenuComponent],
   bootstrap: [AppComponent]
 })

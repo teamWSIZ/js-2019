@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   user = 'Wu Xilao';
   x = 10;
+  age: string;
+  ageint: number;
 
   constructor() { }
 
@@ -22,4 +24,14 @@ export class HomeComponent implements OnInit {
     this.x = this.x - 1;
   }
 
+  submit() {
+    const myString = '1,2,3,8';
+    const splits = myString.split(',');
+    for(let s of splits) {
+      const x = parseInt(s);
+      console.log(x * x);
+    }
+
+    this.ageint = parseInt(this.age);
+  }
 }
