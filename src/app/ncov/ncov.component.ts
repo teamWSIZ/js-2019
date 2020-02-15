@@ -13,14 +13,20 @@ export class NcovComponent implements OnInit {
   chartOptions = {"responsive": true};
   chartData = [
     {data: [1,2,3], label: 'x'},
-    {data: [2,3,3], label: 'y'},
+    // {data: [2,3,3], label: 'y'},
   ];
-  chartLabels = ['A1', 'A2', 'A3'];
+  chartLabels = ['A1', 'A2', 'A3', 'A4'];
 
 
   cases: Case[] = [];
   r = 1.21;
   constructor() { }
+
+  add() {
+    this.chartData[0].data.push(Math.random() * 10);
+    // this.chartData[0].data = [4, 3, 0];
+  }
+
   ngOnInit() {
     //new Date() --> aktualny czas w aktualnej strefie czasowej
     //new Date("2020-01-15") --> godzina 1am tego dnia w aktualnej strefie czasowej

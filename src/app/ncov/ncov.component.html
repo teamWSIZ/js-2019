@@ -27,9 +27,10 @@
   <div class="col-md-6" style="width: 60%">
     <canvas baseChart
             [chartType]="'line'" [datasets]="chartData"
-    [labels]="chartLabels" [options]="chartOptions" [legend]="true">
+     [options]="chartOptions" [legend]="true">
 
     </canvas>
+    <button class="btn btn-outline-success" (click)="add()">add</button>
   </div>
 
 

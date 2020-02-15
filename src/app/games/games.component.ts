@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./games.component.less']
 })
 export class GamesComponent implements OnInit {
+  show_first = true;
 
   constructor() { }
 
