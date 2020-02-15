@@ -29,6 +29,7 @@ import { ProblemsComponent } from './problems/problems.component';
 import { Ncov2019Component } from './ncov2019/ncov2019.component';
 import { NcovComponent } from './ncov/ncov.component';
 import {ChartsModule} from "ng2-charts";
+import { ImageViewComponent } from './games/image-view/image-view.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {ChartsModule} from "ng2-charts";
     ProblemsComponent,
     Ncov2019Component,
     NcovComponent,
+    ImageViewComponent,
   ],
   imports: [
     BrowserModule,
