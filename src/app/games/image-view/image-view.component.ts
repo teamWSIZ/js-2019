@@ -11,6 +11,7 @@ export class ImageViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(`initialized with url:${this.image_url}`)
   }
 
 }

@@ -8,7 +8,10 @@
     </div>
 
     <div *ngIf="!show_first">
-      <app-image-view [image_url]="img" *ngFor="let img of img_urls"></app-image-view>
+      <app-image-view [image_url]="img"
+                      *ngFor="let img of img_urls; let i = index"
+                      (click)="zoom_url=img; img_index=i"
+                      data-toggle="modal" data-target="#aaamodal"></app-image-view>
     </div>
 
   </div>
@@ -16,3 +19,20 @@
   </div>
 </div>
 
+
+
+<!--Modals-->
+<div class="modal bg-dark" id="aaamodal" tabindex="-1" role="dialog"
+     (keydown.arrowLeft)="previousImage()"
+     (keydown.arrowRight)="nextImage()">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content bg-dark" >
+      <div class="modal-body bg-dark text-white-50">
+        <img class="gg" [src]="zoom_url">
+        (image # {{img_index}})
+        <button class="btn btn-outline-secondary" (click)="previousImage()" > < </button>
+        <button class="btn btn-outline-secondary" (click)="nextImage()"> > </button>
+      </div>
+    </div>
+  </div>
+</div>
