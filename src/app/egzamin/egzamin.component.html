@@ -1,0 +1,28 @@
+<div class="row no-gutters">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header h4">
+        Nieparzysta suma
+      </div>
+      <div class="card body">
+        <form>
+          <div class="form-group row">
+            <label for="liczba1" class="col-md-4 col-form-label">Liczba 1</label>
+            <div class="col-md-8">
+              <input type="text" class="form-control"
+                     id="liczba1"
+                     name="liczba1" placeholder="(podaj tablicę liczb)"
+                     [(ngModel)]="inputArray">
+            </div>
+          </div>
+          <button class="btn btn-outline-info" (click)="compute()">Oblicz</button>
+        </form>
+      </div>
+      <div class="card footer">
+        Wynik: {{output}}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6"></div>
+
+</div>

@@ -13,6 +13,7 @@ import {ModalsComponent} from "./modals/modals.component";
 import {ProblemsComponent} from "./problems/problems.component";
 import {Ncov2019Component} from "./ncov2019/ncov2019.component";
 import {NcovComponent} from "./ncov/ncov.component";
+import {EgzaminComponent} from "./egzamin/egzamin.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'problems', component: ProblemsComponent },
   { path: 'ncov', component: Ncov2019Component },
   { path: 'n2019', component: NcovComponent },
+  { path: 'egzamin', component: EgzaminComponent },
 ];
 
 @NgModule({
