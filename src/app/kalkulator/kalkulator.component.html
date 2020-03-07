@@ -73,7 +73,39 @@
     </div>
   </div>
   <app-kantor></app-kantor>
+  <div class="card">
+    <div class="card-header">
+      Liczenie n!
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group row">
+          <label for="liczba2N" class="col-md-4 col-form-label">Liczba 1:</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" id="liczba2N"
+                   name="liczba2N" placeholder="(podaj liczbę)"
+                   (keyup)="wynik2N = computePower(liczba2N,liczba4N)"
+                   [(ngModel)]="liczba2N">
+          </div>
+          <label for="liczba4N" class="col-md-4 col-form-label">Liczba 2:</label>
+          <div class="col-md-8">
+          <input type="text" class="form-control" id="liczba4N"
+                 name="liczba4N" placeholder="(podaj liczbę)"
+                 (keyup)="wynik2N = computePower(liczba2N,liczba4N)"
+                 [(ngModel)]="liczba4N">
+          </div>
+        </div>
+        <p class="text-center">
+          <button class="btn btn-outline-info"
+                  (click)="wynik2N = computePower(liczba2N,liczba4N)">Licz silnię</button>
+        </p>
+
+      </form>
+    </div>
+    <div class="card-footer">
+      Wynik: {{wynik2N}}
+    </div>
+  </div>
+
 </div>
-
-
 </div>

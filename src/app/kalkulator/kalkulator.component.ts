@@ -11,7 +11,10 @@ export class KalkulatorComponent implements OnInit {
   liczbaB: string;
   kwadrat = 0;
   liczba1N =  0;
+  liczba2N = 0;
   wynik1N = 0;
+  wynik2N = 0;
+  liczba4N = 0;
 
   constructor() {
   }
@@ -59,5 +62,15 @@ export class KalkulatorComponent implements OnInit {
       suma += x;
     }
     return suma;
+  }
+
+  computePower(liczba: number, liczba1: number):number{
+    const w = liczba*liczba1;
+    const tab:number[] = []
+    for(let i=0;i<10;i++)
+      tab.push(10)
+    let v = 0;
+    tab.forEach(value=>v=v+value)
+    return v;
   }
 }
