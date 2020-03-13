@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AlgoComponent implements OnInit {
   wynik: string = '---n/a---';
+  tab_reversed = []; //pole klasy ...
 
   constructor() {
   }
@@ -15,22 +16,31 @@ export class AlgoComponent implements OnInit {
   }
 
   check() {
-    let x = 0;
+    let x = 0;  //zmienna lokalna, typu "number"
     let y = 12;
     let z = 99;
     x = x + 3;
     z = x + y;
 
-    let t = [5, 6, 9, 12];
+    let t = [5, 6, 7, 8, 9, 12];  //to jest tablica liczb (number)
+    let rt = []; //to będzie odwrócona tablica t... 12, 9, 8 ... 5
+    rt.unshift(5);
+    rt.unshift(2);  // [2,5]
+
+    rt = [];  //znowu mamy pustą tablicę....
 
     //algo do sprawdzenia czy liczby w "t" rosną:
     let previous = -1000;
     let suma = 0;
 
     for(let v of t) {
+      rt.unshift(v);
+      let zz = 12;
+      zz += 3;
       console.log(`sprawdzam liczbę ${v}`);
       suma = suma + v;
       if (v > previous) {
+        zz += 3;
         console.log(`liczba jest OK`);
         previous = v;
       } else {
@@ -41,5 +51,13 @@ export class AlgoComponent implements OnInit {
     }
     console.log(`koniec sprawdzania; suma=${suma}`)
     this.wynik = 'liczby rosną';
+    this.tab_reversed = rt;
   }
+
+  abra_kadabra() {
+    this.wynik = 'abc';
+
+  }
+
+
 }
