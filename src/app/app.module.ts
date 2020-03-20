@@ -31,7 +31,11 @@ import { NcovComponent } from './ncov/ncov.component';
 import {ChartsModule} from "ng2-charts";
 import { ImageViewComponent } from './games/image-view/image-view.component';
 import { EgzaminComponent } from './egzamin/egzamin.component';
+<<<<<<< HEAD
 import { SortPlComponent } from './sort-pl/sort-pl.component';
+=======
+import { AlgoComponent } from './algo/algo.component';
+>>>>>>> master
 
 @NgModule({
   declarations: [
@@ -62,6 +66,7 @@ import { SortPlComponent } from './sort-pl/sort-pl.component';
     ImageViewComponent,
     EgzaminComponent,
     SortPlComponent,
+    AlgoComponent,
   ],
   imports: [
     BrowserModule,
