@@ -16,20 +16,10 @@ export class KalkulatorComponent implements OnInit {
   wynik1N = 0;
   wynik2N = 0;
   liczba4N = 0;
-  students:Student[] = [{name: 'Przemysław', surname: 'Stokłosa', height: 174}]
-
   constructor() {
   }
 
   ngOnInit() {
-    for(let i=0;i<10;i++){
-      this.students.push({name: 'Przemysław', surname: 'Stokłosa'+i, height: 165+i})
-    }
-    this.students.push({name: 'Anna', surname: 'Łęcka',height: 200})
-    this.students.push({name: 'Anna', surname: 'Lęcka', height: 201})
-    for(const student of this.students){
-      console.log(student.name+' '+student.surname)
-    }
   }
 
   computeSum() {
@@ -82,39 +72,5 @@ export class KalkulatorComponent implements OnInit {
     let v = 0;
     tab.forEach(value=>v=v+value)
     return v;
-  }
-
-  sortuj() {
-    this.students.sort((student1, student2)=>{
-      if(student1.surname<student2.surname)
-        return 1;
-      if(student1.surname>student2.surname)
-        return -1;
-      return 0;
-    })
-  }
-
-  sortuj1() {
-    this.students.sort((student1, student2)=>{
-      if(student1.surname>student2.surname)
-        return 1;
-      if(student1.surname<student2.surname)
-        return -1;
-      return 0;
-    })
-  }
-
-  sortujPl() {
-    const collator = new Intl.Collator('pl')
-    this.students.sort((student1, student2)=>{
-      return collator.compare(student2.surname,student1.surname);
-    })
-  }
-
-  sortuj1Pl() {
-    const collator = new Intl.Collator('pl')
-    this.students.sort((student1, student2)=>{
-      return collator.compare(student1.surname,student2.surname);
-    })
   }
 }
