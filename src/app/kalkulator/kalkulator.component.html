@@ -106,6 +106,19 @@
       Wynik: {{wynik2N}}
     </div>
   </div>
+  <ul>
+    <li *ngFor="let student of students">
+      <label>{{student.name}} {{student.surname}} wzrost: {{student.height}}</label>
+    </li>
+    <button class="btn btn-outline-info"
+            (click)="sortuj()">Sortuj</button>
+    <button class="btn btn-outline-info"
+            (click)="sortuj1()">Sortuj Alfabetycznie</button>
+    <button class="btn btn-outline-info"
+            (click)="sortujPl()">Sortuj Pl</button>
+    <button class="btn btn-outline-info"
+            (click)="sortuj1Pl()">Sortuj Alfabetycznie Pl</button>
+  </ul>
 
 </div>
 </div>
