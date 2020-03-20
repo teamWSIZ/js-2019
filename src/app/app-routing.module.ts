@@ -15,6 +15,7 @@ import {Ncov2019Component} from "./ncov2019/ncov2019.component";
 import {NcovComponent} from "./ncov/ncov.component";
 import {EgzaminComponent} from "./egzamin/egzamin.component";
 import {AlgoComponent} from "./algo/algo.component";
+import {SortPlComponent} from './sort-pl/sort-pl.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'n2019', component: NcovComponent },
   { path: 'egzamin', component: EgzaminComponent },
   { path: 'algo', component: AlgoComponent },
+  { path: 'sort_pl', component: SortPlComponent },
 ];
 
 @NgModule({
