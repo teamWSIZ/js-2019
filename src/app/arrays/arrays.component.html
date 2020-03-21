@@ -7,6 +7,13 @@
       <div class="card-body">
         <form>
           <div class="form-group row">
+            <table class="table-striped">
+              <tbody>
+                <tr *ngFor="let row of array">
+                  <th *ngFor="let element of row">{{element}}</th>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </form>
       </div>

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./arrays.component.less']
 })
 export class ArraysComponent implements OnInit {
+  array: number[][]=[[1,2],[3,4],[1,2],[3,4]];
 
   constructor() { }
 
