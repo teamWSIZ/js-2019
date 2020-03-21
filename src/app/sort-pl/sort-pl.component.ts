@@ -53,4 +53,13 @@ export class SortPlComponent implements OnInit {
       return collator.compare(student1.surname,student2.surname);
     })
   }
+  sortujWzrost(){
+    this.students.sort((student1,student2)=>{
+      if(student1.height<student2.height)
+        return 1;
+      if(student1.height>student2.height)
+        return -1;
+      return 0;
+    })
+  }
 }
