@@ -33,6 +33,7 @@ import { ImageViewComponent } from './games/image-view/image-view.component';
 import { EgzaminComponent } from './egzamin/egzamin.component';
 import { SortPlComponent } from './sort-pl/sort-pl.component';
 import { AlgoComponent } from './algo/algo.component';
+import { ArraysComponent } from './arrays/arrays.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { AlgoComponent } from './algo/algo.component';
     EgzaminComponent,
     SortPlComponent,
     AlgoComponent,
+    ArraysComponent,
   ],
   imports: [
     BrowserModule,
