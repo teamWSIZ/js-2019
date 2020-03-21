@@ -20,6 +20,7 @@ export class ArraysComponent implements OnInit {
     this.array = this.originalNumbers;
   }
   evaluateSquares(): void {
+    this.array=this.originalNumbers.map(row=>row.map(element=>element*element))
   }
 
   f0(): void {
