@@ -16,6 +16,9 @@ export class ArraysComponent implements OnInit {
     this.array = this.originalNumbers;
     this.evaluateSquares();
   }
+  originalArray():void{
+    this.array = this.originalNumbers;
+  }
   evaluateSquares(): void {
   }
 
