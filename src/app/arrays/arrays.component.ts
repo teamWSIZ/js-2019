@@ -18,14 +18,20 @@ export class ArraysComponent implements OnInit {
     this.evaluateSquares();
     this.setupArray1();
   }
-  setupArray1(): void{
-    this.array1=this.array1.map(v=>v*v);
-    console.log(this.array1);
+  setupArray1():void{
+    this.array1 = this.array1.filter(v=>v%2===0);
+  }
+  evenElements():void {
+  }
+
+  oddElements():void {
+  }
+  originalArray1D():void {
   }
   originalArray():void{
     this.array = this.originalNumbers;
   }
-  evaluateSquares(): void {
+  evaluateSquares():void {
     this.array=this.originalNumbers.map(row=>row.map(element=>element*element))
   }
   evaluateQubes():void{
