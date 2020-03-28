@@ -22,14 +22,8 @@ export class ArraysComponent implements OnInit {
     this.setupArray1();
   }
   setupArray1():void{
-    this.array1 = [];
-    for(let i=0;i<10;i++) {
-      this.array1.push(i);
-      this.numbersSet.add(i);
-    }
-    // this.array1 = this.array1.filter(v=>v%2===0);
-    this.array1Dinfo='Czy jakiś element jest parzysty? '+this.array1.some(v=>v%2===0);
-    this.array1Dinfo='Czy wszystkie elementy są parzyste? '+this.array1.every(v=>v%2===0);
+    this.array1 = [1,2,3,4,5,5,6,7,8,8,9,10]
+    this.numbersSet = new Set<number>(this.array1);
   }
   evenElements():void {
     this.array1 = this.originalNumbers1D.filter(v=>v%2===0);
