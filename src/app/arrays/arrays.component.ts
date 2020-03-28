@@ -23,8 +23,10 @@ export class ArraysComponent implements OnInit {
     this.array1 = this.array1.filter(v=>v%2===0);
   }
   evenElements():void {
+    this.array1 = this.originalNumbers1D.filter(v=>v%2===0);
   }
   oddElements():void {
+    this.array1 = this.originalNumbers1D.filter(v=>v%2===1);
   }
   originalArray1D():void {
     this.array1=this.originalNumbers1D;
