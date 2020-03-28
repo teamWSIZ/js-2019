@@ -8,6 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class ArraysComponent implements OnInit {
   originalNumbers: number[][] = [[1, 2, 3, 4], [3, 4, 7, 5], [1, 2, 1, 1], [3, 4, 8, 5]];
   array: number[][] = [[]];
+  array1: number[] = [1,2,3,4,5,6,7,8,9,10];
 
   constructor() {
   }

@@ -9,16 +9,9 @@
           <div class="form-group row">
             <table class="table-striped">
               <tbody>
-                <tr *ngFor="let row of array">
-                  <th *ngFor="let element of row">{{element}}</th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div>
-            <table class="table-striped">
-              <tbody>
-              <th *ngFor="let element of array1">{{element}}</th>
+              <tr *ngFor="let row of array">
+                <th *ngFor="let element of row">{{element}}</th>
+              </tr>
               </tbody>
             </table>
           </div>
@@ -33,6 +26,27 @@
         </button>
         <button class="btn btn-outline-info"
                 (click)="evaluateQubes()">Sześciany
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        Tablica 1D
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <table class="table-striped">
+              <tbody>
+              <th *ngFor="let element of array1">{{element}}</th>
+              </tbody>
+            </table>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-outline-info"
+                (click)="originalArray()">Oblicz
         </button>
       </div>
     </div>
