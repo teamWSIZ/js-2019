@@ -38,7 +38,12 @@
           <div class="form-group row">
             <table class="table-striped">
               <tbody>
-              <th *ngFor="let element of array1">{{element}}</th>
+              <tr>
+                <th *ngFor="let element of array1">{{element}}</th>
+              </tr>
+              <tr>
+                <th *ngFor="let element of numbersSet">{{element}}</th>
+              </tr>
               </tbody>
             </table>
           </div>
@@ -46,7 +51,7 @@
             <label>[{{array1}}]</label>
           </div>
           <div>
-            <label>[{{array1Dinfo}}]</label>
+            <label>{{array1Dinfo}}</label>
           </div>
         </form>
       </div>

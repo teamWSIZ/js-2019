@@ -11,6 +11,7 @@ export class ArraysComponent implements OnInit {
   originalNumbers1D = [1,2,3,4,5,6,7,8,9,10];
   array1: number[] = [1,2,3,4,5,6,7,8,9,10];
   array1Dinfo = '';
+  numbersSet: Set<number> = new Set<number>()
 
   constructor() {
   }
@@ -21,16 +22,20 @@ export class ArraysComponent implements OnInit {
     this.setupArray1();
   }
   setupArray1():void{
-    this.array1 = this.array1.filter(v=>v%2===0);
+    this.array1 = [];
+    for(let i=0;i<10;i++) {
+      this.array1.push(i);
+      this.numbersSet.add(i);
+    }
+    // this.array1 = this.array1.filter(v=>v%2===0);
+    this.array1Dinfo='Czy jakiś element jest parzysty? '+this.array1.some(v=>v%2===0);
+    this.array1Dinfo='Czy wszystkie elementy są parzyste? '+this.array1.every(v=>v%2===0);
   }
   evenElements():void {
     this.array1 = this.originalNumbers1D.filter(v=>v%2===0);
   }
   oddElements():void {
     this.array1 = this.originalNumbers1D.filter(v=>v%2===1);
-  }
-  originalArray1D():void {
-    this.array1=this.originalNumbers1D;
   }
   originalArray():void{
     this.array = this.originalNumbers;
