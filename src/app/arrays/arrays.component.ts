@@ -24,7 +24,6 @@ export class ArraysComponent implements OnInit {
   }
   evenElements():void {
   }
-
   oddElements():void {
   }
   originalArray1D():void {
