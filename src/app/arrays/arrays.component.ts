@@ -16,6 +16,11 @@ export class ArraysComponent implements OnInit {
   ngOnInit(): void {
     this.array = this.originalNumbers;
     this.evaluateSquares();
+    this.setupArray1();
+  }
+  setupArray1(): void{
+    this.array1=this.array1.map(v=>v*v);
+    console.log(this.array1);
   }
   originalArray():void{
     this.array = this.originalNumbers;
