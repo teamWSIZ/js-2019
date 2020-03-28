@@ -22,6 +22,9 @@ export class ArraysComponent implements OnInit {
   evaluateSquares(): void {
     this.array=this.originalNumbers.map(row=>row.map(element=>element*element))
   }
+  evaluateQubes():void{
+    this.array = this.originalNumbers;
+  }
 
   f0(): void {
     for (let i = 0; i < 10; i++) {

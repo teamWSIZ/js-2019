@@ -15,6 +15,13 @@
               </tbody>
             </table>
           </div>
+          <div>
+            <table class="table-striped">
+              <tbody>
+              <th *ngFor="let element of array1">{{element}}</th>
+              </tbody>
+            </table>
+          </div>
         </form>
       </div>
       <div class="card-footer">
@@ -23,6 +30,9 @@
         </button>
         <button class="btn btn-outline-info"
                 (click)="evaluateSquares()">Kwadraty
+        </button>
+        <button class="btn btn-outline-info"
+                (click)="evaluateQubes()">Sześciany
         </button>
       </div>
     </div>
