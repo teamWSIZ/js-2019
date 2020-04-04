@@ -7,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArrayFiltersComponent implements OnInit {
   array1: number[] = [1,2,3,4,5,6,7,8,9,10];
+  originalNumbers1D: number[] = [1,2,3,4,5,6,7,8,9,10];
   array1Dinfo = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  originalArray1D():void{
+    this.array1 = this.originalNumbers1D;
+  }
+  evenElements():void {
+    this.array1 = this.originalNumbers1D.filter(v=>v%2===0);
+  }
+  oddElements():void {
+    this.array1 = this.originalNumbers1D.filter(v=>v%2===1);
+  }
 }
