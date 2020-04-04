@@ -18,12 +18,13 @@ export class ArrayFiltersComponent implements OnInit {
   ngOnInit(): void {
     this.planeta = Planet.ZIEMIA;
     console.log(Planet);
-    console.log(this.planetInfo(Planet.JOWISZ));
+    console.log(this.planetInfo(Planet.ZIEMIA));
   }
   simplePlanet():Planet{
     return Planet.MERKURY;
   }
   planetInfo(planet: Planet):string{
+    console.log(planet as Planet)
     switch(+planet){
       case Planet.ZIEMIA:
       case Planet.MARS:

@@ -1,5 +1,5 @@
 export enum Planet{
-  MERKURY,
+  MERKURY=1,
   WENUS,
   ZIEMIA,
   MARS,
