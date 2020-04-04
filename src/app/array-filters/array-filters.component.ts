@@ -17,9 +17,23 @@ export class ArrayFiltersComponent implements OnInit {
 
   ngOnInit(): void {
     this.planeta = Planet.ZIEMIA;
+    console.log(Planet);
+    console.log(this.planetInfo(Planet.JOWISZ));
   }
   simplePlanet():Planet{
     return Planet.MERKURY;
+  }
+  planetInfo(planet: Planet):string{
+    switch(+planet){
+      case Planet.ZIEMIA:
+      case Planet.MARS:
+        return 'Można wylądować';
+      case Planet.JOWISZ:
+      case Planet.NEPTUN:
+        return 'Gazowy olbrzym';
+      default:
+        return 'Inna planeta';
+    }
   }
   originalArray1D():void{
     this.array1 = this.originalNumbers1D;
