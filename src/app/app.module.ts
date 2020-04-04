@@ -34,6 +34,7 @@ import { EgzaminComponent } from './egzamin/egzamin.component';
 import { SortPlComponent } from './sort-pl/sort-pl.component';
 import { AlgoComponent } from './algo/algo.component';
 import { ArraysComponent } from './arrays/arrays.component';
+import { ArrayFiltersComponent } from './array-filters/array-filters.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { ArraysComponent } from './arrays/arrays.component';
     SortPlComponent,
     AlgoComponent,
     ArraysComponent,
+    ArrayFiltersComponent,
   ],
   imports: [
     BrowserModule,

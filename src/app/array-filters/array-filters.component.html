@@ -1,0 +1,26 @@
+ <div class="card">
+      <div class="card-header">
+        Tablica 1D
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <table class="table-striped">
+              <tbody>
+              <tr>
+                <th *ngFor="let element of array1">{{element}}</th>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <label>[{{array1}}]</label>
+          </div>
+          <div>
+            <label>{{array1Dinfo}}</label>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+      </div>
+    </div>
