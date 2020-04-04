@@ -20,7 +20,10 @@ export class ArrayFiltersComponent implements OnInit {
   evenElements():void {
     this.array1 = this.originalNumbers1D.filter(v=>v%2===0);
   }
-  oddElements():void {
-    this.array1 = this.originalNumbers1D.filter(v=>v%2===1);
+  divisibleBy4():void {
+    this.array1 = this.originalNumbers1D.filter(v=>v%4===0);
+  }
+  notDivisibleBy4():void {
+    this.array1 = this.originalNumbers1D.filter(v=>v%4===0);
   }
 }
