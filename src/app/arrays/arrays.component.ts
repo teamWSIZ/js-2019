@@ -25,6 +25,9 @@ export class ArraysComponent implements OnInit {
     this.array1 = [1,2,3,4,5,5,6,7,8,8,9,10]
     this.numbersSet = new Set<number>(this.array1);
   }
+  originalArray1D():void{
+    this.array1 = this.originalNumbers1D;
+  }
   evenElements():void {
     this.array1 = this.originalNumbers1D.filter(v=>v%2===0);
   }
