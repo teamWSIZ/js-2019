@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Planet} from '../planet';
 
 @Component({
@@ -16,6 +16,10 @@ export class ArrayFiltersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.planeta = Planet.ZIEMIA;
+  }
+  simplePlanet():Planet{
+    return Planet.MERKURY;
   }
   originalArray1D():void{
     this.array1 = this.originalNumbers1D;
