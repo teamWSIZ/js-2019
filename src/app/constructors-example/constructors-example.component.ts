@@ -15,8 +15,10 @@ export class ConstructorsExampleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const person: Person = new Person();
-    console.log(person);
+    for(let i=0;i<10;i++) {
+      const person: Person = new Person();
+      console.log(person);
+    }
   }
 
   originalArray1D() {
