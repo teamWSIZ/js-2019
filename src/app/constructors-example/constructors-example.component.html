@@ -1,1 +1,23 @@
-<p>constructors-example works!</p>
+<div class="card">
+  <div class="card-header">
+    Przykłady konstruktorów
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group row">
+        <table class="table-striped">
+          <tbody>
+          <tr>
+            <th *ngFor="let element of array1">{{element}}</th>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-outline-info"
+            (click)="originalArray1D()">Oryginalna
+    </button>
+  </div>
+</div>
