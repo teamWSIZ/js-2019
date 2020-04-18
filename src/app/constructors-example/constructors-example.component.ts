@@ -17,7 +17,7 @@ export class ConstructorsExampleComponent implements OnInit {
 
   ngOnInit(): void {
     for(let i=0;i<10;i++) {
-      const person: Person = new Person('Przemysław1','Stokłosa'+i,170+i);
+      const person: Person = new Person('Przemysław1','Stokłosa'+i,170+i,70+i);
       this.persons.push(person);
     }
   }
