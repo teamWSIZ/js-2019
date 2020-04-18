@@ -1,9 +1,9 @@
 export class Person{
   firstName: string;
   surname: string;
-  constructor(){
+  constructor(firstName: string, surname: string){
     console.log('Konstuktor obiektu Person');
-    this.firstName = 'Przemysław';
-    this.surname = 'Stokłosa';
+    this.firstName = firstName;
+    this.surname = surname;
   }
 }
