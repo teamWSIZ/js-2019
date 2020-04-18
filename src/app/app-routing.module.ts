@@ -17,6 +17,7 @@ import {EgzaminComponent} from "./egzamin/egzamin.component";
 import {AlgoComponent} from "./algo/algo.component";
 import {SortPlComponent} from './sort-pl/sort-pl.component';
 import {ArraysComponent} from './arrays/arrays.component';
+import {ConstructorsExampleComponent} from './constructors-example/constructors-example.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'algo', component: AlgoComponent },
   { path: 'sort_pl', component: SortPlComponent },
   { path: 'arrays', component: ArraysComponent },
+  { path: 'constructors', component: ConstructorsExampleComponent },
 ];
 
 @NgModule({
