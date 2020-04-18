@@ -1,8 +1,6 @@
 export class Person{
-  public firstName: string;
-  public surname: string;
   private height: number;
-  constructor(firstName: string, surname: string){
+  constructor(public firstName: string, public surname: string){
     console.log('Konstuktor obiektu Person');
     this.firstName = firstName;
     this.surname = surname;
