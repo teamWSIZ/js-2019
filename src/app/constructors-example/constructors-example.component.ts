@@ -10,6 +10,7 @@ export class ConstructorsExampleComponent implements OnInit {
 
   array1: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   originalNumbers1D: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  persons: Person[] = [];
 
   constructor() {
   }
@@ -17,7 +18,7 @@ export class ConstructorsExampleComponent implements OnInit {
   ngOnInit(): void {
     for(let i=0;i<10;i++) {
       const person: Person = new Person('Przemysław','Stokłosa'+i);
-      console.log(person);
+      this.persons.push(person);
     }
   }
 

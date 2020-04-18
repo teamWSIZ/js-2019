@@ -5,13 +5,14 @@
   <div class="card-body">
     <form>
       <div class="form-group row">
-        <table class="table-striped">
-          <tbody>
-          <tr>
-            <th *ngFor="let element of array1">{{element}}</th>
-          </tr>
-          </tbody>
-        </table>
+        <div class="form-group row">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let person of persons">
+              {{person.firstName}} {{person.surname}}
+              <span class="badge badge-light badge-pill"> wzrost: {{person.height}}</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </form>
   </div>
