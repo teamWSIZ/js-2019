@@ -32,7 +32,7 @@ export class SortAlgoritmsComponent implements OnInit {
         isSorted=false;
       }
       console.log(this.array);
-      this.sortSteps.push(this.array);
+      this.sortSteps.push([...this.array]);
     }
     console.log(this.sortSteps);
   }
