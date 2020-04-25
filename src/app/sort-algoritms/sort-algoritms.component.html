@@ -3,7 +3,11 @@
     <div class="card">
       <div class="card-header">Sortowanie algorytm</div>
       <div class="card-body">
-        [{{array}}]
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let line of sortSteps">
+            [{{line}}]
+          </li>
+        </ul>
       </div>
       <div class="card-footer"></div>
     </div>
