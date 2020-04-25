@@ -22,17 +22,20 @@ export class SortAlgoritmsComponent implements OnInit {
     // [1, 2, 100, 3, 4, 5, 6, 7, 8, 9, 10]
     // [1, 2, 3, 100, 4, 5, 6, 7, 8, 9, 10]
     // [1, 2, 3, 4, 100, 5, 6, 7, 8, 9, 10]
-    let isSorted = true;
-    for(let i=0; i<this.array.length-1; i++){
-      const n0=this.array[i];
-      const n1=this.array[i+1];
-      if(n0>n1){
-        this.array[i]=n1;
-        this.array[i+1]=n0;
-        isSorted=false;
+    let swap = true;
+    while(swap) {
+      for (let i = 0; i < this.array.length - 1; i++) {
+        const n0 = this.array[i];
+        const n1 = this.array[i + 1];
+        if (n0 > n1) {
+          this.array[i] = n1;
+          this.array[i + 1] = n0;
+          swap = true;
+        }
+        console.log(this.array);
+        this.sortSteps.push([...this.array]);
       }
-      console.log(this.array);
-      this.sortSteps.push([...this.array]);
+      this.sortSteps.push('_________________');
     }
     console.log(this.sortSteps);
   }
