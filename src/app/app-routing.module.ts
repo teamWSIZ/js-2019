@@ -18,6 +18,7 @@ import {AlgoComponent} from "./algo/algo.component";
 import {SortPlComponent} from './sort-pl/sort-pl.component';
 import {ArraysComponent} from './arrays/arrays.component';
 import {ConstructorsExampleComponent} from './constructors-example/constructors-example.component';
+import {ArraysortComponent} from './arraysort/arraysort.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'sort_pl', component: SortPlComponent },
   { path: 'arrays', component: ArraysComponent },
   { path: 'constructors', component: ConstructorsExampleComponent },
+  { path: 'array_sorts', component: ArraysortComponent },
 ];
 
 @NgModule({
