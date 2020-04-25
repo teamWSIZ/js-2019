@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SortAlgoritmsComponent implements OnInit {
   array: number[] = [1, 100, 2, 3, 40, 5, 6, 7, 8, 9, 10];
+  sortSteps = [[]];
   originalNumbers1D: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   constructor() {
@@ -14,6 +15,7 @@ export class SortAlgoritmsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.array)
+    this.sortSteps.push(this.array)
     // this.array1.sort((n1,n2)=>n1-n2);
     // console.log(this.array1)
     // [1, 100, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -28,6 +30,7 @@ export class SortAlgoritmsComponent implements OnInit {
         this.array[i+1]=n0;
       }
       console.log(this.array);
+      this.sortSteps.push(this.array);
     }
   }
 
