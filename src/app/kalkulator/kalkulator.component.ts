@@ -64,13 +64,12 @@ export class KalkulatorComponent implements OnInit {
     return suma;
   }
 
-  computePower(liczba: number, liczba1: number):number{
+  computePower(liczba: number, liczba1: number):void{
     const w = liczba*liczba1;
     const tab:number[] = []
     for(let i=0;i<10;i++)
       tab.push(10)
     let v = 0;
     tab.forEach(value=>v=v+value)
-    return v;
   }
 }
