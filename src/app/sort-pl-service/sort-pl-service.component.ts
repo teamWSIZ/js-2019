@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Student} from '../student';
 import {StudentService} from '../student.service';
 import {Observable} from 'rxjs';
-import {Student1Service} from '../student1.service';
+import {TeacherService} from '../teacher.service';
 
 @Component({
   selector: 'app-sort-pl-service',
@@ -11,20 +11,21 @@ import {Student1Service} from '../student1.service';
 })
 export class SortPlServiceComponent implements OnInit {
 
-  students:Student[] = null
+  persons:Student[] = null
   studentsRx:Observable<Student[]> = null
-  constructor(private studentService: Student1Service) { }
+  constructor(private studentService: StudentService,
+              private teacherService: TeacherService) { }
 
   ngOnInit(): void {
     // this.students = this.studentService.getStudents()
     this.studentsRx=this.studentService.getStudentsRx()
-    this.studentsRx.subscribe(st=>this.students=st)
-    for(const student of this.students){
+    this.studentsRx.subscribe(st=>this.persons=st)
+    for(const student of this.persons){
       console.log(student.name+' '+student.surname)
     }
   }
   sortuj() {
-    this.students.sort((student1, student2)=>{
+    this.persons.sort((student1, student2)=>{
       if(student1.surname<student2.surname)
         return 1;
       if(student1.surname>student2.surname)
@@ -34,7 +35,7 @@ export class SortPlServiceComponent implements OnInit {
   }
 
   sortuj1() {
-    this.students.sort((student1, student2)=>{
+    this.persons.sort((student1, student2)=>{
       if(student1.surname>student2.surname)
         return 1;
       if(student1.surname<student2.surname)
@@ -45,19 +46,19 @@ export class SortPlServiceComponent implements OnInit {
 
   sortujPl() {
     const collator = new Intl.Collator('pl')
-    this.students.sort((student1, student2)=>{
+    this.persons.sort((student1, student2)=>{
       return collator.compare(student2.surname,student1.surname);
     })
   }
 
   sortuj1Pl() {
     const collator = new Intl.Collator('pl')
-    this.students.sort((student1, student2)=>{
+    this.persons.sort((student1, student2)=>{
       return collator.compare(student1.surname,student2.surname);
     })
   }
   sortujWzrost(){
-    this.students.sort((student1,student2)=>{
+    this.persons.sort((student1, student2)=>{
       if(student1.height<student2.height)
         return 1;
       if(student1.height>student2.height)

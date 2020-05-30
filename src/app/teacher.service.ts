@@ -5,7 +5,7 @@ import {Observable, of} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class Student1Service {
+export class TeacherService {
 
   students:Student[] = [{name: 'Piotr', surname: 'Stokłosa', height: 184}]
 
