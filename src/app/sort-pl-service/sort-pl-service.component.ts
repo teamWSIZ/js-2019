@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Student} from '../student';
 import {StudentService} from '../student.service';
 import {Observable} from 'rxjs';
+import {Student1Service} from '../student1.service';
 
 @Component({
   selector: 'app-sort-pl-service',
@@ -12,7 +13,7 @@ export class SortPlServiceComponent implements OnInit {
 
   students:Student[] = null
   studentsRx:Observable<Student[]> = null
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: Student1Service) { }
 
   ngOnInit(): void {
     // this.students = this.studentService.getStudents()
