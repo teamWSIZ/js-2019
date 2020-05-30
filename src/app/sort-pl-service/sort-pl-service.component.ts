@@ -11,7 +11,7 @@ import {TeacherService} from '../teacher.service';
 })
 export class SortPlServiceComponent implements OnInit {
 
-  persons:Student[] = null
+  persons:Student[] = []
   studentsRx:Observable<Student[]> = null
   constructor(private studentService: StudentService,
               private teacherService: TeacherService) { }
@@ -19,7 +19,8 @@ export class SortPlServiceComponent implements OnInit {
   ngOnInit(): void {
     // this.students = this.studentService.getStudents()
     this.studentsRx=this.studentService.getStudentsRx()
-    this.studentsRx.subscribe(st=>this.persons=st)
+    this.studentsRx.subscribe(st=>this.persons.push(...st))
+    this.teacherService.getStudentsRx().subscribe(st=>this.persons.push(...st))
     for(const student of this.persons){
       console.log(student.name+' '+student.surname)
     }
