@@ -19,6 +19,7 @@ import {SortPlComponent} from './sort-pl/sort-pl.component';
 import {ArraysComponent} from './arrays/arrays.component';
 import {ConstructorsExampleComponent} from './constructors-example/constructors-example.component';
 import {SortAlgoritmsComponent} from './sort-algoritms/sort-algoritms.component';
+import {SortPlServiceComponent} from './sort-pl-service/sort-pl-service.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'arrays', component: ArraysComponent },
   { path: 'constructors', component: ConstructorsExampleComponent },
   { path: 'sort_algorithms', component: SortAlgoritmsComponent },
+  { path: 'sort_pl_service', component: SortPlServiceComponent },
 ];
 
 @NgModule({

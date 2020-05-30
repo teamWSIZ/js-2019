@@ -37,6 +37,7 @@ import { ArraysComponent } from './arrays/arrays.component';
 import { ArrayFiltersComponent } from './array-filters/array-filters.component';
 import { ConstructorsExampleComponent } from './constructors-example/constructors-example.component';
 import { SortAlgoritmsComponent } from './sort-algoritms/sort-algoritms.component';
+import { SortPlServiceComponent } from './sort-pl-service/sort-pl-service.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { SortAlgoritmsComponent } from './sort-algoritms/sort-algoritms.componen
     ArrayFiltersComponent,
     ConstructorsExampleComponent,
     SortAlgoritmsComponent,
+    SortPlServiceComponent,
   ],
   imports: [
     BrowserModule,
