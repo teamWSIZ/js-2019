@@ -14,6 +14,10 @@ export class StudentService {
     }
     this.students.push({name: 'Anna', surname: 'Łęcka',height: 200})
     this.students.push({name: 'Anna', surname: 'Lęcka', height: 201})
+
+    for(const student of this.students){
+      console.log('service: '+student.name+' '+student.surname)
+    }
   }
   getStudents():Student[]{
     return this.students;

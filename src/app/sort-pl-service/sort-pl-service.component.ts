@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Student} from '../student';
+import {StudentService} from '../student.service';
 
 @Component({
   selector: 'app-sort-pl-service',
@@ -9,7 +10,7 @@ import {Student} from '../student';
 export class SortPlServiceComponent implements OnInit {
 
   students:Student[] = [{name: 'Przemysław', surname: 'Stokłosa', height: 174}]
-  constructor() { }
+  constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
     for(let i=0;i<10;i++){
