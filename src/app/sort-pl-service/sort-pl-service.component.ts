@@ -13,11 +13,7 @@ export class SortPlServiceComponent implements OnInit {
   constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
-    for(let i=0;i<10;i++){
-      this.students.push({name: 'Przemysław', surname: 'Stokłosa'+i, height: 165+i})
-    }
-    this.students.push({name: 'Anna', surname: 'Łęcka',height: 200})
-    this.students.push({name: 'Anna', surname: 'Lęcka', height: 201})
+    this.students = this.studentService.getStudents()
     for(const student of this.students){
       console.log(student.name+' '+student.surname)
     }

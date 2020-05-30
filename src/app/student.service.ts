@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Student} from './student';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,8 @@ export class StudentService {
   }
   getStudents():Student[]{
     return this.students;
+  }
+  getStudentsRx():Observable<Student[]>{
+    return of(this.students);
   }
 }
