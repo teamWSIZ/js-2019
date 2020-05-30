@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Student} from '../student';
 import {StudentService} from '../student.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-sort-pl-service',
@@ -9,11 +10,14 @@ import {StudentService} from '../student.service';
 })
 export class SortPlServiceComponent implements OnInit {
 
-  students:Student[] = [{name: 'Przemysław', surname: 'Stokłosa', height: 174}]
+  students:Student[] = null
+  studentsRx:Observable<Student[]> = null
   constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
-    this.students = this.studentService.getStudents()
+    // this.students = this.studentService.getStudents()
+    this.studentsRx=this.studentService.getStudentsRx()
+    this.studentsRx.subscribe(st=>this.students=st)
     for(const student of this.students){
       console.log(student.name+' '+student.surname)
     }
