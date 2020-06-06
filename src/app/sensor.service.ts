@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {SensorData} from './SensorData';
 import {Observable, of} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,9 @@ import {Observable, of} from 'rxjs';
 export class SensorService {
   sensorData: SensorData[] = []
 
-  constructor() {
+  sensorDataUrl = 'http://wsi.ovh/json?sensor=1'
+
+  constructor(private http: HttpClient) {
     for(let i=0;i<10;i++)
       this.sensorData.push({id: i,temp: '20'})
   }
@@ -17,5 +20,8 @@ export class SensorService {
   }
   getSensorDataAsync():Observable<SensorData[]>{
     return of(this.sensorData);
+  }
+  getSensorDataHttp():Observable<SensorData[]>{
+    return this.http.get<SensorData[]>(this.sensorDataUrl)
   }
 }
