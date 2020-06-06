@@ -38,6 +38,7 @@ import { ArrayFiltersComponent } from './array-filters/array-filters.component';
 import { ConstructorsExampleComponent } from './constructors-example/constructors-example.component';
 import { SortAlgoritmsComponent } from './sort-algoritms/sort-algoritms.component';
 import { SortPlServiceComponent } from './sort-pl-service/sort-pl-service.component';
+import { TemperatureComponent } from './temperature/temperature.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { SortPlServiceComponent } from './sort-pl-service/sort-pl-service.compon
     ConstructorsExampleComponent,
     SortAlgoritmsComponent,
     SortPlServiceComponent,
+    TemperatureComponent,
   ],
   imports: [
     BrowserModule,
