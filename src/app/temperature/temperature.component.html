@@ -1,1 +1,21 @@
-<p>temperature works!</p>
+<div class="row no-gutters">
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-header">
+        Temperatura odczytana z czujników
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let data of sensorData">
+                Temperatura: {{data.temp}}
+                <span class="badge badge-light badge-pill"> {{data.id}}</span>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

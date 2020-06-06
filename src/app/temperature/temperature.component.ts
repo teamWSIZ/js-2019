@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SensorService} from '../../sensor.service';
+import {SensorService} from '../sensor.service';
+import {SensorData} from '../SensorData';
 
 @Component({
   selector: 'app-temperature',
@@ -7,8 +8,11 @@ import {SensorService} from '../../sensor.service';
   styleUrls: ['./temperature.component.less']
 })
 export class TemperatureComponent implements OnInit {
+  sensorData : SensorData[] = []
 
-  constructor(private sensorService: SensorService) { }
+  constructor(private sensorService: SensorService) {
+    this.sensorData = sensorService.getSensorData()
+  }
 
   ngOnInit(): void {
   }
