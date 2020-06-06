@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {SensorData} from './SensorData';
 import {Observable, of} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {catchError} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,9 @@ export class SensorService {
     return of(this.sensorData);
   }
   getSensorDataHttp():Observable<SensorData[]>{
-    return this.http.get<SensorData[]>(this.sensorDataUrl)
+    return this.http.get<SensorData[]>(this.sensorDataUrl).pipe(catchError(err=>{
+      console.log(`Coś poszło nie tak...${err.message}`)
+      return of(this.sensorData)
+    }))
   }
 }
