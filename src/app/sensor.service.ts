@@ -10,11 +10,11 @@ import {catchError} from 'rxjs/operators';
 export class SensorService {
   sensorData: SensorData[] = []
 
-  sensorDataUrl = 'http://wsi.ovh/json?limit=100&sensor=1'
+  sensorDataUrlSensor0 = 'http://wsi.ovh/json?sensor=1'
 
   constructor(private http: HttpClient) {
     for(let i=0;i<10;i++)
-      this.sensorData.push({id: i,temp: '20'})
+      this.sensorData.push({id: i,temp: '20', wilg: '40'})
   }
   getSensorData():SensorData[]{
     return this.sensorData;
@@ -23,7 +23,7 @@ export class SensorService {
     return of(this.sensorData);
   }
   getSensorDataHttp():Observable<SensorData[]>{
-    return this.http.get<SensorData[]>(this.sensorDataUrl).pipe(catchError(err=>{
+    return this.http.get<SensorData[]>(this.sensorDataUrlSensor0).pipe(catchError(err=>{
       console.log(`Coś poszło nie tak...${err.message}`)
       return of(this.sensorData)
     }))
