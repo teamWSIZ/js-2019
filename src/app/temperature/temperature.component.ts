@@ -11,7 +11,8 @@ export class TemperatureComponent implements OnInit {
   sensorData : SensorData[] = []
 
   constructor(private sensorService: SensorService) {
-    this.sensorData = sensorService.getSensorData()
+    // this.sensorData = sensorService.getSensorData()
+    sensorService.getSensorDataAsync().subscribe(data=>this.sensorData=data)
   }
 
   ngOnInit(): void {

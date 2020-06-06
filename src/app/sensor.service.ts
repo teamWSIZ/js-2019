@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {SensorData} from './SensorData';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +14,8 @@ export class SensorService {
   }
   getSensorData():SensorData[]{
     return this.sensorData;
+  }
+  getSensorDataAsync():Observable<SensorData[]>{
+    return of(this.sensorData);
   }
 }
