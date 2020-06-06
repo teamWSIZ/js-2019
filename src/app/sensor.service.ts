@@ -10,7 +10,7 @@ import {catchError} from 'rxjs/operators';
 export class SensorService {
   sensorData: SensorData[] = []
 
-  sensorDataUrl = 'http://wsi.ovh/json?sensor=1'
+  sensorDataUrl = 'http://wsi.ovh/json?limit=100&sensor=1'
 
   constructor(private http: HttpClient) {
     for(let i=0;i<10;i++)
