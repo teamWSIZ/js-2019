@@ -20,11 +20,16 @@
   </div>
   <div class="col-md-6" style="width: 60%">
     <canvas baseChart
-            [chartType]="'line'" [datasets]="chartDataTemperature"
+            [chartType]="chartDataTemperatureType" [datasets]="chartDataTemperature"
             [labels]="chartLabel"
             [options]="chartOptions" [legend]="true">
 
     </canvas>
+    <div class="card-footer">
+      <button class="btn btn-outline-info"
+              (click)="changeType()">Oryginalna
+      </button>
+    </div>
     <canvas baseChart
             [chartType]="'bar'" [datasets]="chartDataHumidity"
             [labels]="chartLabel"

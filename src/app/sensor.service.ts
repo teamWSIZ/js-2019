@@ -23,9 +23,10 @@ export class SensorService {
     return of(this.sensorData);
   }
   getSensorDataHttp(sensorNo: number):Observable<SensorData[]>{
-    return this.http.get<SensorData[]>(`${this.sensorDataUrlSensor}${sensorNo}`).pipe(catchError(err=>{
+    const data = this.http.get<SensorData[]>(`${this.sensorDataUrlSensor}${sensorNo}`).pipe(catchError(err=>{
       console.log(`Coś poszło nie tak...${err.message}`)
       return of(this.sensorData)
     }))
+    return data
   }
 }

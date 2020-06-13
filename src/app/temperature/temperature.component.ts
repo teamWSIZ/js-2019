@@ -17,6 +17,7 @@ export class TemperatureComponent implements OnInit {
     {data: [], label: 'temperatura 2'},
     // {data: [2,3,3], label: 'y'},
   ];
+  chartDataTemperatureType='line'
 
   chartDataHumidity = [
     {data: [], label: 'wilgotność 1'},
@@ -52,4 +53,6 @@ export class TemperatureComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeType() {
+  }
 }
