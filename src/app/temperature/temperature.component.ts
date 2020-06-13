@@ -54,6 +54,6 @@ export class TemperatureComponent implements OnInit {
   }
 
   changeType() {
-    this.chartDataTemperatureType = 'bar'
+    this.chartDataTemperatureType = this.chartDataTemperatureType==='line'?'bar':'line'
   }
 }
