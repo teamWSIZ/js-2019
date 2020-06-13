@@ -20,7 +20,13 @@
   </div>
   <div class="col-md-6" style="width: 60%">
     <canvas baseChart
-            [chartType]="'line'" [datasets]="chartData"
+            [chartType]="'line'" [datasets]="chartDataTemperature"
+            [labels]="chartLabel"
+            [options]="chartOptions" [legend]="true">
+
+    </canvas>
+    <canvas baseChart
+            [chartType]="'bar'" [datasets]="chartDataHumidity"
             [labels]="chartLabel"
             [options]="chartOptions" [legend]="true">
 

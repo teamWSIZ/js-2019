@@ -12,7 +12,13 @@ export class TemperatureComponent implements OnInit {
   sensorData : SensorData[] = []
 
   chartOptions = {responsive: true};
-  chartData = [
+  chartDataTemperature = [
+    {data: [], label: 'sensor 1'},
+    {data: [], label: 'sensor 2'},
+    // {data: [2,3,3], label: 'y'},
+  ];
+
+  chartDataHumidity = [
     {data: [], label: 'sensor 1'},
     {data: [], label: 'sensor 2'},
     // {data: [2,3,3], label: 'y'},
@@ -24,7 +30,7 @@ export class TemperatureComponent implements OnInit {
     sensorService.getSensorDataHttp(1).subscribe(data=>{
       // this.sensorData=data
       data.forEach((element,index)=>{
-        this.chartData[0].data.push(Number(element.temp))
+        this.chartDataTemperature[0].data.push(Number(element.temp))
         if(this.chartLabel.length<data.length)
            this.chartLabel.push(''+index)
         console.log(`element: ${element.temp}`)
@@ -33,7 +39,7 @@ export class TemperatureComponent implements OnInit {
     sensorService.getSensorDataHttp(2).subscribe(data=>{
       // this.sensorData=data
       data.forEach((element,index)=>{
-        this.chartData[1].data.push(Number(element.temp))
+        this.chartDataTemperature[1].data.push(Number(element.temp))
         if(this.chartLabel.length<data.length)
           this.chartLabel.push(''+index)
         console.log(`element: ${element.temp}`)
