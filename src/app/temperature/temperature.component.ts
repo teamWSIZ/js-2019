@@ -18,6 +18,7 @@ export class TemperatureComponent implements OnInit {
     // {data: [2,3,3], label: 'y'},
   ];
   chartDataTemperatureType='line'
+  chartDataTypeNo = 0
 
   chartDataHumidity = [
     {data: [], label: 'wilgotność 1'},
@@ -48,6 +49,20 @@ export class TemperatureComponent implements OnInit {
   }
 
   changeType() {
-    this.chartDataTemperatureType = this.chartDataTemperatureType==='line'?'bar':'line'
+    if(this.chartDataTypeNo<=2)
+      this.chartDataTypeNo++
+    else
+      this.chartDataTypeNo=0
+    switch(this.chartDataTypeNo){
+      case 0:
+        this.chartDataTemperatureType='line'
+        break;
+      case 1:
+        this.chartDataTemperatureType='bar'
+        break;
+      case 2:
+        this.chartDataTemperatureType='radar'
+        break;
+    }
   }
 }
