@@ -31,6 +31,7 @@ export class TemperatureComponent implements OnInit {
       // this.sensorData=data
       data.forEach((element,index)=>{
         this.chartDataTemperature[0].data.push(Number(element.temp))
+        this.chartDataHumidity[0].data.push(Number(element.wilg))
         if(this.chartLabel.length<data.length)
            this.chartLabel.push(''+index)
         console.log(`element: ${element.temp}`)
@@ -40,6 +41,7 @@ export class TemperatureComponent implements OnInit {
       // this.sensorData=data
       data.forEach((element,index)=>{
         this.chartDataTemperature[1].data.push(Number(element.temp))
+        this.chartDataHumidity[1].data.push(Number(element.wilg))
         if(this.chartLabel.length<data.length)
           this.chartLabel.push(''+index)
         console.log(`element: ${element.temp}`)
