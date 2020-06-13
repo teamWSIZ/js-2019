@@ -13,14 +13,14 @@ export class TemperatureComponent implements OnInit {
 
   chartOptions = {responsive: true};
   chartDataTemperature = [
-    {data: [], label: 'sensor 1'},
-    {data: [], label: 'sensor 2'},
+    {data: [], label: 'temperatura 1'},
+    {data: [], label: 'temperatura 2'},
     // {data: [2,3,3], label: 'y'},
   ];
 
   chartDataHumidity = [
-    {data: [], label: 'sensor 1'},
-    {data: [], label: 'sensor 2'},
+    {data: [], label: 'wilgotność 1'},
+    {data: [], label: 'wilgotność 2'},
     // {data: [2,3,3], label: 'y'},
   ];
   chartLabel: Label[] = []
