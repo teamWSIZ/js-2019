@@ -20,11 +20,11 @@ export class TemperatureComponent implements OnInit {
 
   constructor(private sensorService: SensorService) {
     // this.sensorData = sensorService.getSensorData()
-    sensorService.getSensorDataHttp().subscribe(data=>{
+    sensorService.getSensorDataHttp(1).subscribe(data=>{
       this.sensorData=data
-      data.forEach(element=>{
+      data.forEach((element,index)=>{
         this.chartData[0].data.push(Number(element.temp))
-        this.chartLabel.push(''+Number(element.temp))
+        this.chartLabel.push(''+index)
         console.log(`element: ${element.temp}`)
       })
     })
