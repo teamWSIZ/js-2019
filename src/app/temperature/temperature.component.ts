@@ -26,11 +26,18 @@ export class TemperatureComponent implements OnInit {
     // {data: [2,3,3], label: 'y'},
   ];
   chartLabel: Label[] = []
+  chartDataTemperatureDifference = [
+    {data: [], label: 'wylot'},
+    {data: [], label: 'wlot'}
+  ]
+  chartLabelTD: Label[] = []
 
   constructor(private sensorService: SensorService) {
     // this.sensorData = sensorService.getSensorData()
     this.getSensorData(1)
     this.getSensorData(2)
+    this.getTemperatureData(3)
+    this.getTemperatureData(4)
   }
   getSensorData(sensorNo: number):void{
     this.sensorService.getSensorDataHttp(sensorNo).subscribe(data=>{
@@ -40,6 +47,18 @@ export class TemperatureComponent implements OnInit {
         this.chartDataHumidity[sensorNo-1].data.push(Number(element.wilg))
         if(this.chartLabel.length<data.length)
           this.chartLabel.push(''+index)
+        // console.log(`element: ${element.temp}`)
+      })
+    })
+  }
+
+  getTemperatureData(sensorNo: number):void{
+    this.sensorService.getSensorDataHttp(sensorNo).subscribe(data=>{
+      // this.sensorData=data
+      data.forEach((element,index)=>{
+        this.chartDataTemperatureDifference[sensorNo-3].data.push(Number(element.temp))
+        if(this.chartLabelTD.length<data.length)
+          this.chartLabelTD.push(''+index)
         console.log(`element: ${element.temp}`)
       })
     })
