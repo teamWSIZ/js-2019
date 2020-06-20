@@ -34,17 +34,17 @@ export class TemperatureComponent implements OnInit {
 
   constructor(private sensorService: SensorService) {
     // this.sensorData = sensorService.getSensorData()
-    this.getSensorData(1)
-    this.getSensorData(2)
-    this.getTemperatureData(3)
-    this.getTemperatureData(4)
+    this.getSensorData(1,0)
+    this.getSensorData(2,1)
+    this.getTemperatureData(3,0)
+    this.getTemperatureData(4,1)
   }
-  getSensorData(sensorNo: number):void{
+  getSensorData(sensorNo: number, plotLine: number):void{
     this.sensorService.getSensorDataHttp(sensorNo).subscribe(data=>{
       // this.sensorData=data
       data.forEach((element,index)=>{
-        this.chartDataTemperature[sensorNo-1].data.push(Number(element.temp))
-        this.chartDataHumidity[sensorNo-1].data.push(Number(element.wilg))
+        this.chartDataTemperature[plotLine].data.push(Number(element.temp))
+        this.chartDataHumidity[plotLine].data.push(Number(element.wilg))
         if(this.chartLabel.length<data.length)
           this.chartLabel.push(''+index)
         // console.log(`element: ${element.temp}`)
@@ -52,11 +52,11 @@ export class TemperatureComponent implements OnInit {
     })
   }
 
-  getTemperatureData(sensorNo: number):void{
+  getTemperatureData(sensorNo: number, plotLine: number):void{
     this.sensorService.getSensorDataHttp(sensorNo).subscribe(data=>{
       // this.sensorData=data
       data.forEach((element,index)=>{
-        this.chartDataTemperatureDifference[sensorNo-3].data.push(Number(element.temp))
+        this.chartDataTemperatureDifference[plotLine].data.push(Number(element.temp))
         if(this.chartLabelTD.length<data.length)
           this.chartLabelTD.push(''+index)
         console.log(`element: ${element.temp}`)
