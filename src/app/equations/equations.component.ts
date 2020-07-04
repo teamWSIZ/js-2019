@@ -33,6 +33,15 @@ export class EquationsComponent implements OnInit {
     this.functionData.forEach(number=>{
       this.chartDataLinearEquation[0].data.push(number)
       this.chartLabel.push(number.toString())
+    })
+
+    this.equationService.getDataHttp().subscribe(data=>{
+      this.functionData = data
+
+      this.functionData.forEach(number=>{
+        this.chartDataLinearEquation[0].data.push(number)
+        this.chartLabel.push(number.toString())
+      })
 
     })
   }
