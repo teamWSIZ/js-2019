@@ -20,9 +20,22 @@ export class EquationsComponent implements OnInit {
   chartLabel: Label[] = []
 
 
-  constructor() { }
+  constructor() {
+    for(let i=0;i<100;i++){
+      this.functionData.push(i)
+    }
+  }
 
   ngOnInit() {
+    this.getEquationData()
+  }
+
+  getEquationData():void{
+    this.functionData.forEach(number=>{
+      this.chartDataLinearEquation[0].data.push(number)
+      this.chartLabel.push(number.toString())
+
+    })
   }
 
 }
