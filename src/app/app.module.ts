@@ -39,6 +39,7 @@ import { ConstructorsExampleComponent } from './constructors-example/constructor
 import { SortAlgoritmsComponent } from './sort-algoritms/sort-algoritms.component';
 import { SortPlServiceComponent } from './sort-pl-service/sort-pl-service.component';
 import { TemperatureComponent } from './temperature/temperature.component';
+import { EquationsComponent } from './equations/equations.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
     SortAlgoritmsComponent,
     SortPlServiceComponent,
     TemperatureComponent,
+    EquationsComponent,
   ],
   imports: [
     BrowserModule,

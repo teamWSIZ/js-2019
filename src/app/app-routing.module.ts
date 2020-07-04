@@ -21,6 +21,7 @@ import {ConstructorsExampleComponent} from './constructors-example/constructors-
 import {SortAlgoritmsComponent} from './sort-algoritms/sort-algoritms.component';
 import {SortPlServiceComponent} from './sort-pl-service/sort-pl-service.component';
 import {TemperatureComponent} from './temperature/temperature.component';
+import {EquationsComponent} from './equations/equations.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'sort_algorithms', component: SortAlgoritmsComponent },
   { path: 'sort_pl_service', component: SortPlServiceComponent },
   { path: 'temperature', component: TemperatureComponent },
+  { path: 'equations', component: EquationsComponent },
 ];
 
 @NgModule({
