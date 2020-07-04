@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SensorData} from '../SensorData';
 import {Label} from 'ng2-charts';
+import {EquationsService} from '../../equations.service';
 
 @Component({
   selector: 'app-equations',
@@ -20,10 +21,8 @@ export class EquationsComponent implements OnInit {
   chartLabel: Label[] = []
 
 
-  constructor() {
-    for(let i=0;i<100;i++){
-      this.functionData.push(i)
-    }
+  constructor(private equationService: EquationsService) {
+    this.functionData = equationService.getFunctionData()
   }
 
   ngOnInit() {
