@@ -1,1 +1,29 @@
-<p>equations works!</p>
+<div class="row no-gutters">
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-header">
+        Wykresy funkcji pobranych z serwera
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let data of functionData">
+                x: {{data.temp}}
+                <span class="badge badge-light badge-pill"> {{data.id}}</span>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" style="width: 60%">
+    <canvas baseChart
+            [chartType]="chartDataTemperatureType" [datasets]="chartDataLinearEquation"
+            [labels]="chartLabel"
+            [options]="chartOptions" [legend]="true">
+
+    </canvas>
+  </div>
+</div>
