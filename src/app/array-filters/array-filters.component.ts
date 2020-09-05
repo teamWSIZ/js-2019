@@ -10,6 +10,7 @@ import {Planet} from '../planet';
 export class ArrayFiltersComponent implements OnInit {
   array1: number[] = [];
   originalNumbers1D: number[] = [];
+  array2: number[] = [];
   array1Dinfo = '';
   planeta: Planet;
 
@@ -57,6 +58,6 @@ export class ArrayFiltersComponent implements OnInit {
     this.array1 = this.originalNumbers1D.filter(v=>v%5!==0);
   }
   algorithm0() {
-    this.array1 = this.originalNumbers1D.filter(v=>v%10!==0);
+    this.array1 = this.originalNumbers1D.map(a=>a*a).filter(x=>x<100).map(x=>x*x*x);
   }
 }
