@@ -8,8 +8,8 @@ import {Planet} from '../planet';
 })
 
 export class ArrayFiltersComponent implements OnInit {
-  array1: number[] = [1,2,3,4,5,6,7,8,9,10];
-  originalNumbers1D: number[] = [1,2,3,4,5,6,7,8,9,10];
+  array1: number[] = [];
+  originalNumbers1D: number[] = [];
   array1Dinfo = '';
   planeta: Planet;
 
@@ -19,6 +19,11 @@ export class ArrayFiltersComponent implements OnInit {
     this.planeta = Planet.ZIEMIA;
     console.log(Planet);
     console.log(this.planetInfo(Planet.ZIEMIA));
+
+    for(var i=0;i<20;i++) {
+      this.originalNumbers1D.push(i)
+      this.array1.push(i);
+    }
   }
   simplePlanet():Planet{
     return Planet.MERKURY;
@@ -51,7 +56,7 @@ export class ArrayFiltersComponent implements OnInit {
   notDivisibleBy5() {
     this.array1 = this.originalNumbers1D.filter(v=>v%5!==0);
   }
-  notDivisibleBy10() {
+  algorithm0() {
     this.array1 = this.originalNumbers1D.filter(v=>v%10!==0);
   }
 }
