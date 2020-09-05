@@ -46,9 +46,12 @@ export class ArrayFiltersComponent implements OnInit {
     this.array1 = this.originalNumbers1D.filter(v=>v%4===0);
   }
   notDivisibleBy4():void {
-    this.array1 = this.originalNumbers1D.filter(v=>v%4===0);
+    this.array1 = this.originalNumbers1D.filter(v=>v%4!==0);
   }
   notDivisibleBy5() {
     this.array1 = this.originalNumbers1D.filter(v=>v%5!==0);
+  }
+  notDivisibleBy10() {
+    this.array1 = this.originalNumbers1D.filter(v=>v%10!==0);
   }
 }

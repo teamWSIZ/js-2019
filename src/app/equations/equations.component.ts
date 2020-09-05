@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SensorData} from '../SensorData';
 import {Label} from 'ng2-charts';
-import {EquationsService} from '../../equations.service';
+import {EquationsService} from '../equations.service';
 
 @Component({
   selector: 'app-equations',
@@ -9,7 +9,7 @@ import {EquationsService} from '../../equations.service';
   styleUrls: ['./equations.component.less']
 })
 export class EquationsComponent implements OnInit {
-  functionData : Number[] = []
+  functionData: Number[] = [];
 
   chartOptions = {responsive: true};
   chartDataLinearEquation = [
@@ -17,8 +17,8 @@ export class EquationsComponent implements OnInit {
     // {data: [2,3,3], label: 'y'},
   ];
 
-  chartDataTemperatureType='line'
-  chartLabel: Label[] = []
+  chartDataTemperatureType = 'line';
+  chartLabel: Label[] = [];
 
 
   constructor(private equationService: EquationsService) {
