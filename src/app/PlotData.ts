@@ -4,6 +4,6 @@ import {SensorData} from './SensorData';
 import {catchError} from 'rxjs/operators';
 
 export class PlotData{
-    x: number;
-    y: number;
+    x: number
+    y: number
 }
