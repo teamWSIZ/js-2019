@@ -66,7 +66,10 @@ export class ArrayFiltersComponent implements OnInit {
     this.array1 = array.filter(e=>e%2==0).map(e=>e*e);
   }
   algorithm2(){
-    let array : number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-    this.array2D = array.filter(e=>e>5 && e%2==0).map(e=>[e*e*e]);
+    let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+    this.array2D = array.filter(e=>e<5 && e>1).map(e=>[e,e*e,e*e*e,e*e*e*e,e*e*e*e*e]);
+
+    //let array1 = new Array(100);
+    //array1.map((e,index)=>e=index);
   }
 }
